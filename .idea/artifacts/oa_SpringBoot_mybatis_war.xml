@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="oa-SpringBoot-mybatis:war">
+    <output-path>$PROJECT_DIR$/../oa-SpringBoot-mybatis/target</output-path>
+    <root id="archive" name="mybatis-mxw.war">
+      <element id="artifact" artifact-name="oa-SpringBoot-mybatis:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../oa-SpringBoot-mybatis/oa-SpringBoot-mybatis.iml" filepath="$PROJECT_DIR$/../oa-SpringBoot-mybatis/oa-SpringBoot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shiro-sb/shiro-sb.iml" filepath="$PROJECT_DIR$/shiro-sb/shiro-sb.iml" />
+    </modules>
+  </component>
+</project>

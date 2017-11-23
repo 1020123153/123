@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="oa-SpringBoot-redis:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="oa-SpringBoot-redis-1.4.7.RELEASE.war">
+      <element id="artifact" artifact-name="oa-SpringBoot-redis:war exploded" />
+    </root>
+  </artifact>
+</component>

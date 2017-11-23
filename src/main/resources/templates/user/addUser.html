@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>user</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+<script>
+    function sub(i){
+        document.getElementById("add-registStatus").value = i;
+        document.getElementById("add-status").value = i;
+    }
+
+    function toList(){
+        location.href="user/showGoods";
+    }
+</script>
+<br/>
+<h1>添加订单</h1>
+<br/><br/>
+<div class="with:80%">
+    <form class="form-inline" id="add-form"  th:action="@{/add}"  method="post">
+        <table  style="border-collapse:separate; border-spacing:5px 10px;">
+            <tr>
+                <td><label>客户：</label></td>
+                <td><input type="text" class="form-control" name="kehu"/></td>
+                <td><label>销售日期：</label></td>
+                <td><input type="text" class="form-control" name="xiaoshoudate"/></td>
+            </tr>
+            <tr>
+                <td><label>预计收款金额：</label></td>
+                <td><input type="text" class="form-control" name="paymoney"/></td>
+                <td><label>预计收款日期：</label></td>
+                <td><input type="text" class="form-control" name="arrivaldate"/></td>
+            </tr>
+            <tr>
+                <td>发货方式:</td>
+                <td>
+                    <select class="form-control" name="fangshi">
+                        <option value="">--请选择--  </option>
+                        <option value="1">客户自提</option>
+                        <option value="2">我司发运</option>
+                        <option value="3">我司自送</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label>业务员：</label></td>
+                <td>
+                    <select id="add-sel" class="form-control" name="salesman">
+                        <option value="">--请选择--</option>
+                        <option th:each="dto : ${dtos}" th:value="${dto.id}" th:text="${dto.name}">--请选择--</option>
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label>备注：</label></td><td  colspan="3">
+                <textarea style="width: 90%" class="form-control" name="remark"></textarea></td>
+            </tr>
+        </table>
+        <input type="hidden" id="add-registStatus" name="registStatus"/>
+        <input type="hidden" id="add-status" name="status"/>
+        <div class="form-group">
+            <input type="submit" value="提交" onclick="sub(2)" class="btn btn-info" />
+            &nbsp; &nbsp; &nbsp;
+            <input type="submit" value="暂存" onclick="sub(1)" class="btn btn-info" />
+            &nbsp; &nbsp; &nbsp;
+            <input type="reset" value="取消" onclick="toList()" class="btn btn-info" />
+        </div>
+    </form>
+</div>
+</body>
+</html>

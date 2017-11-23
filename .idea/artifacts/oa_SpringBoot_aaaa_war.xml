@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="oa-SpringBoot-aaaa:war">
+    <output-path>$PROJECT_DIR$/../oa-SpringBoot-aaaa/target</output-path>
+    <root id="archive" name="asd.war">
+      <element id="artifact" artifact-name="oa-SpringBoot-aaaa:war exploded" />
+    </root>
+  </artifact>
+</component>
